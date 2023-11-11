@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  @media (max-width: 767px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .item {
+      flex: 0 0 calc(50% - 20px);
+      margin: 10px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+  
+    .item {
+      margin: 0;
+    }
+  }
+  
+@media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column; 
+    }
+  }
+  
+  header div.container {
+    place-content: flex-start;
+  }
+
+  header div.container nav {
+ width: 70%;
+ display: flex;
+ place-content: space-between;
+  }
+  menu, menu-check {
+    display: none;
+  }
+
+  @media only screen and (max-width: 990px) {
+    header div.container, header div.container ul, header div.container ul li {
+    display: inline;
+    }
+    header div.container nav {
+        width: 100%;
+        display: inline;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    header h1 {
+        margin: 0;
+    }
+    header h1 a {
+        padding: 0;
+    }
+
+    header div.container {
+    display:flex;
+    place-content: space-between;
+    }
+
+    #menu-check:not(:checked) ~ nav {
+        display: none;
+    }
+
+    #menu-check:checked ~ nav {
+        display: block;
+    }
+    header div.container nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        padding-top: 0.5em;
+        padding-right: 1.5em;
+
+    }
+    header  div.container nav ul, header  div.container nav ul li {
+        display: block;
+        align: right;
+}
+  }
